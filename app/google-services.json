@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "275063578045",
+    "project_id": "android-messenger-93a6c",
+    "storage_bucket": "android-messenger-93a6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275063578045:android:ca6920d934904ac9c3c6d4",
+        "android_client_info": {
+          "package_name": "com.bsuirproject.androidmessenger"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCewP6ew3RnGW02rdXZox7E-Ve0y7Ulbgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
