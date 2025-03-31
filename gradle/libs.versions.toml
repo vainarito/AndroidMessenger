@@ -1,28 +1,66 @@
 [versions]
 agp = "8.6.0"
+appcompatVersion = "1.6.1"
+circleimageview = "3.1.0"
+converterGson = "2.9.0"
 firebaseBom = "33.4.0"
+firebaseBomVersion = "31.2.0"
+firebaseFunctions = "20.2.0"
+firebaseStorageVersion = "latest_version"
+glide = "4.16.0"
+googleFirebaseBom = "33.6.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
+loggingInterceptor = "4.9.0"
+loggingInterceptorVersion = "4.9.3"
 material = "1.12.0"
 activity = "1.9.2"
 constraintlayout = "2.1.4"
 firebaseAuth = "23.0.0"
 firebaseDatabase = "21.0.0"
+miui = "latest-version"
+postgresql = "42.5.0"
+retrofit = "2.9.0"
+firebaseStorage = "21.0.1"
+securityCrypto = "1.0.0"
 
 [libraries]
+appcompat-v161 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
+boot-spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+boot-spring-boot-starter-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
+circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-bom-v3360 = { module = "com.google.firebase:firebase-bom", version.ref = "googleFirebaseBom" }
+firebase-functions = { module = "com.google.firebase:firebase-functions", version.ref = "firebaseFunctions" }
+firebase-storage-vlatestversion = { module = "com.google.firebase:firebase-storage", version.ref = "firebaseStorageVersion" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+google-firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+google-firebase-auth = { module = "com.google.firebase:firebase-auth" }
+firebase-bom-v3120 = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
+google-firebase-database = { module = "com.google.firebase:firebase-database" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
+logging-interceptor-v493 = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptorVersion" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+miui = { module = "com.xiaomi.framework:miui", version.ref = "miui" }
+postgresql = { module = "org.postgresql:postgresql" }
+postgresql-postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresql" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+security-crypto = { module = "androidx.security:security-crypto", version.ref = "securityCrypto" }
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+spring-boot-starter-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
+firebase-storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "firebaseStorage" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

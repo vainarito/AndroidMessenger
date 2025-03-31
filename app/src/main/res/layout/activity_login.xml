@@ -3,143 +3,222 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.LoginActivity">
+    android:background="@color/white"
+    tools:context=".activity.LoginActivity">
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/chat"
-        tools:srcCompat="@drawable/chat" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/ubuntu_bold"
-        android:text="Login"
-        android:textColor="@color/dark_gray_blue"
-        android:textSize="55sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        tools:ignore="HardcodedText" />
-
-    <Button
-        android:id="@+id/LoginBtn"
-        android:layout_width="335dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="@color/dark_gray_blue"
-        android:text="Login"
-        android:textColor="@color/white"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:ignore="HardcodedText" />
-
-    <LinearLayout
-        android:layout_width="335dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="32dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginBtn">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:text="Don't have an account? "
-            android:textSize="17sp"
-            tools:ignore="RtlHardcoded" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/LetsRegistration"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:text="Let's create it!"
-            android:textColor="@color/dark_gray_blue"
-            android:textSize="17sp"
-            tools:ignore="RtlHardcoded" />
-    </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chatBackground"
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:background="@drawable/background_login_chat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="335dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="100dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5">
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="369dp"
+                    android:layout_height="285dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/chat"
+                    tools:srcCompat="@drawable/chat" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/mail_48px" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/chatBackground"
+                app:layout_constraintTop_toBottomOf="@+id/chatBackground">
 
-        <EditText
-            android:id="@+id/EmailEd"
-            android:layout_width="275dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:backgroundTint="@drawable/color_selector"
-            android:ems="10"
-            android:gravity="left"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:textColorHint="@color/white_lavender"
-            android:textSize="30sp"
-            tools:ignore="HardcodedText,RtlHardcoded" />
+                <TextView
+                    android:id="@+id/loginText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="Login"
+                    android:textColor="#333333"
+                    android:textSize="55sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
 
-    </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="335dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/loginText"
+                    app:layout_constraintTop_toBottomOf="@+id/loginText">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="335dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/mail_48px" />
 
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/lock_48px"
-            tools:srcCompat="@drawable/lock_48px" />
+                    <EditText
+                        android:id="@+id/emailEd"
+                        android:layout_width="275dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@drawable/color_selector"
+                        android:ellipsize="end"
+                        android:ems="10"
+                        android:gravity="left"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:scrollHorizontally="true"
+                        android:textColorHint="@color/white_lavender"
+                        android:textSize="30sp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+                </LinearLayout>
 
-        <EditText
-            android:id="@+id/PasswordEd"
-            android:layout_width="275dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:backgroundTint="@drawable/color_selector"
-            android:ems="10"
-            android:gravity="left"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:textColorHint="@color/white_lavender"
-            android:textSize="30sp"
-            tools:ignore="HardcodedText,RtlHardcoded" />
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="335dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/lock_48px"
+                        tools:srcCompat="@drawable/lock_48px" />
+
+                    <EditText
+                        android:id="@+id/passwordEd"
+                        android:layout_width="275dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@drawable/color_selector"
+                        android:ems="10"
+                        android:gravity="left"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:textColorHint="@color/white_lavender"
+                        android:textSize="30sp"
+                        android:maxLines="1"
+                        android:scrollHorizontally="true"
+                        android:ellipsize="end"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/loginBtn"
+                    android:layout_width="335dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="#526B8E"
+                    android:text="Login"
+                    android:textColor="@color/white"
+                    android:textSize="35sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+                    app:layout_constraintStart_toStartOf="@+id/loginBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/loginBtn">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="Don't have an account? "
+                        android:textSize="17sp"
+                        tools:ignore="RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/goToRegisterActivityTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Let's create it!"
+                        android:textColor="#6F91BC"
+                        android:textSize="17sp"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                    <TextView
+                        android:id="@+id/forgotYourPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="Forgot your password?"
+                        android:textSize="17sp"
+                        tools:ignore="RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/restoreAccess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=" Restore access!"
+                        android:textColor="#6F91BC"
+                        android:textSize="17sp"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

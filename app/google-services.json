@@ -1,13 +1,14 @@
 {
   "project_info": {
-    "project_number": "275063578045",
-    "project_id": "android-messenger-93a6c",
-    "storage_bucket": "android-messenger-93a6c.appspot.com"
+    "project_number": "915328748253",
+    "firebase_url": "https://pmsshopproject-default-rtdb.firebaseio.com",
+    "project_id": "pmsshopproject",
+    "storage_bucket": "pmsshopproject.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:275063578045:android:ca6920d934904ac9c3c6d4",
+        "mobilesdk_app_id": "1:915328748253:android:95f0367d21ddc060356934",
         "android_client_info": {
           "package_name": "com.bsuirproject.androidmessenger"
         }
@@ -15,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCewP6ew3RnGW02rdXZox7E-Ve0y7Ulbgc"
+          "current_key": "AIzaSyArVsdYZFX5VlraNuaEJiArCx5eIOjPi9w"
         }
       ],
       "services": {
